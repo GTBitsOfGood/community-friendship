@@ -10,4 +10,12 @@ module.exports = (router) => {
         req.logout();
         res.redirect('/');
     });
+
+    router.post('/login', (req,res) => {
+        res.send("the information you submitted is " + req.body.username + " " + req.body.password);
+    });
+
+    router.post('/register', (req,res) => {
+        res.send("the information you submitted is " + req.body.username + " " + req.body.password);
+    });
 };
