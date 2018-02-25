@@ -1,5 +1,5 @@
 const passport = require('passport');
-const Strategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 
 const User = mongoose.model('users');
@@ -10,18 +10,40 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((user, done) => {
     done(null, user);
 });
+//
+// passport.use(new Strategy(
+//     async (username, password, cb) => {
+//         const user = await User.findOne({username: username});
+//
+//         if (user && await user.checkPassword(password)) {
+//             return cb(null, user);
+//         }
+//         if(!user){
+//             const newUser = await new User({username:username, password:User.generateHash(password)}).save();
+//             return cb(null, newUser);
+//         }
+//         cb("incorrect pass",false);
+//     })
+// );
+passport.use('local-signup', new LocalStrategy(
+    async (req, username, password, cb) => {
+        const user = await User.findOne({username: username});
 
-passport.use(new Strategy(
+        if (user) {
+            return done('user exists', false);
+        }
+
+        const newUser = await new User({username: username, password: User.generateHash(password)}).save();
+        return cb(null, newUser);
+    }));
+
+
+passport.use('local-login', new LocalStrategy(
     async (username, password, cb) => {
         const user = await User.findOne({username: username});
 
         if (user && await user.checkPassword(password)) {
             return cb(null, user);
         }
-        if(!user){
-            const newUser = await new User({username:username, password:User.generateHash(password)}).save();
-            return cb(null, newUser);
-        }
-        cb("incorrect pass",false);
-    })
-);
+        cb("incorrect pass/ user", false);
+    }));
