@@ -18,7 +18,10 @@ passport.use(new Strategy(
         if (user && await user.checkPassword(password)) {
             return cb(null, user);
         }
-        const newUser = await new User({username:username, password:password}).save();
-        return cb(null, newUser);
+        if(!user){
+            const newUser = await new User({username:username, password:User.generateHash(password)}).save();
+            return cb(null, newUser);
+        }
+        cb("incorrect pass",false);
     })
 );

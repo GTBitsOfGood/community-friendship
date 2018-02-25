@@ -13,8 +13,7 @@ module.exports = (router) => {
 
     router.post('/login', passport.authenticate('local', {
         successRedirect : '/api/current_user', // redirect to the secure profile section
-        failureRedirect : '/login', // redirect back to the login page if there is an error
-        failureFlash : true // allow flash messages
+        failureRedirect : '#/login', // redirect back to the login page if there is an error
     }));
 
     router.post('/register', passport.authenticate('local', {
@@ -23,9 +22,6 @@ module.exports = (router) => {
         failureFlash : true // allow flash messages
     }));
 
-    // router.post('/register', (req,res) => {
-    //     res.send("the information you submitted is " + req.body.username + " " + req.body.password);
-    // });
     function isLoggedIn(req, res, next) {
 
         // if user is authenticated in the session, carry on
