@@ -1,15 +1,6 @@
 import {combineReducers} from 'redux';
-import authreducer from './authreducer';
+import authReducer from './authReducer';
 
 export default combineReducers({
-    auth:authreducer,
+    auth:authReducer,
 })
-
-function rootReducer(state = {name: 'Horizons'}, action) {
-    switch (action.type) {
-        default:
-            return state;
-    }
-}
-
-export default rootReducer;

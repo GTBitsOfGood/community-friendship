@@ -7,6 +7,7 @@ const AppContainer = ({ name }) => {
     return (
         <div>
             <Title name={name} />
+            <h1>hi</h1>
         </div>
     );
 };
