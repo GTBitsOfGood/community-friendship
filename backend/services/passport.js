@@ -26,11 +26,11 @@ passport.deserializeUser((user, done) => {
 //     })
 // );
 passport.use('local-signup', new LocalStrategy(
-    async (req, username, password, cb) => {
+    async (username, password, cb) => {
         const user = await User.findOne({username: username});
 
         if (user) {
-            return done('user exists', false);
+            return cb('user exists', false);
         }
 
         const newUser = await new User({username: username, password: User.generateHash(password)}).save();

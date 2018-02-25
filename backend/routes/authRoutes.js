@@ -18,8 +18,7 @@ module.exports = (router) => {
 
     router.post('/register', passport.authenticate('local-signup', {
         successRedirect : '/api/current_user', // redirect to the secure profile section
-        failureRedirect : '/register', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
+        failureRedirect : '#/register', // redirect back to the signup page if there is an error
     }));
 
     function isLoggedIn(req, res, next) {
