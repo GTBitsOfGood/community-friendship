@@ -27,7 +27,9 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/public'),
         publicPath: '/',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        hotUpdateChunkFilename: 'hot/hot-update.js',
+        hotUpdateMainFilename: 'hot/hot-update.json'
     },
     devtool: 'cheap-eval-source-map',
     devServer: {
