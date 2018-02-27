@@ -2,7 +2,7 @@ const passport = require('passport');
 
 module.exports = (router) => {
     router.use('/current_user', isLoggedIn, (req, res) => {
-        res.send(req.user);
+        res.redirect('/employeehandbook');
     });
 
     router.use('/logout', (req, res) => {
