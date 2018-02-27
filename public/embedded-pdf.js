@@ -19,7 +19,6 @@ class PageButton extends React.Component {
     handleClick(i) {
       const pageNumber = i;
       this.setState({pageNumber: pageNumber});
-      alert(pageNumber);
     }
     
     renderPage(i) {
@@ -32,23 +31,23 @@ class PageButton extends React.Component {
     }
     
     render() {
+      let map = null;
+      var mapPage = "map.pdf#page=" + this.state.pageNumber;
+      map = <iframe src={mapPage} width="100%" height="800px">Please download the PDF to view it: <a href="map.pdf">Download PDF</a></iframe>;
       return (
         <div className="embedded-pdf">
           <div className="table-of-contents">
-            <h1>Table of Contents</h1>
             {this.renderPage(1)}
             {this.renderPage(2)}
             {this.renderPage(3)}
             {this.renderPage(4)}
           </div>
           <div className="pdf">
-            <iframe src="map.pdf" width="100%" height="800px">
-            This browser does not support PDFs. Please download the PDF to view it: <a href="map.pdf">Download PDF</a>
-            </iframe>
+            {map}
           </div>
         </div>
       );
     }
   }
   
-  ReactDOM.render(<EmbeddedPDF />, document.getElementById("root"));
+  ReactDOM.render(<EmbeddedPDF />, document.getElementById('content'));
