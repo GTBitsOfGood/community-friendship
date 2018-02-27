@@ -1,40 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { changeHandbookPage } from '../actions/index';
 
 class PDFViewer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            page: '0'
+            page: 0
         }
-        this.goToPage = this.goToPage(this);
+        this.goToPage = this.goToPage.bind(this);
     }
 
-    goToPage(page) {
-        alert('You need to implement this.');
-        const { changePage } = this.props;
-        changePage(page);
 
+    goToPage(page) {
+        this.setState({page: page});
     }
 
     render() {
         const { page } = this.state;
+        const src = "map.pdf#page=" + page;
         return (
             <div>
-                <div>
-                    The page is {page}
-                </div>
-                <li>
-                    <button style={{display: 'inline-block', marginLeft: 15}} onClick={() => this.goToPage(1)}>1</button>
-                    <button style={{display: 'inline-block', marginLeft: 15}} onClick={() => this.goToPage(2)}>2</button>
-                    <button style={{display: 'inline-block', marginLeft: 15}} onClick={() => this.goToPage(3)}>3</button>
-
-                </li>
+                <h1>pdf page {page}</h1>
+                <a href="map.pdf">Download PDF</a>
+               <button onClick={() => this.goToPage(1)}> go to page 1</button>
+                <button onClick={() => this.goToPage(2)}> go to page 2</button>
+                <button onClick={() => this.goToPage(3)}> go to page 3</button>
+                <button onClick={() => this.goToPage(4)}> go to page 4</button>
+                <object data={src} type="application/pdf" width="100%" height="800px">
+                </object>
             </div>
-    );
-    }
+
+
+    );}
+
 }
+
+
 
 const mapStateToProps = state => {
     return {};
@@ -42,14 +44,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        changePage: page => {
-            /**
-             * TODO (5)
-             *
-             * Uncomment this line and call your imported action creator here
-             */
-            dispatch(changeHandbookPage(page));
-        }
+
     }
 }
 

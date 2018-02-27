@@ -16,7 +16,7 @@ app.get('/*', (request, response) => {
     response.sendFile(__dirname + '/public/index.html'); // For React/Redux
 });
 
-app.use('/api', api);
+//app.use('/api', api);
 
 
 

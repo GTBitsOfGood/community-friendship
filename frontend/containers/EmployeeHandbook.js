@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import Title from '../components/Title';
-import Title from '../components/PDFViewer';
+import PDFViewer from '../components/PDFViewer';
 
 
 const EmployeeHandbook = ({ name }) => {
@@ -10,11 +10,13 @@ const EmployeeHandbook = ({ name }) => {
         <div>
             <Title name={name} />
             <PDFViewer/>
+
         </div>
-);
+    );
 };
 
-AppContainer.propTypes = {
+
+EmployeeHandbook.propTypes = {
     name: PropTypes.string,
 };
 
@@ -32,4 +34,4 @@ const mapDispatchToProps = (/* dispatch */) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(AppContainer);
+)(EmployeeHandbook);
