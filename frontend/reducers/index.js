@@ -1,3 +1,4 @@
+
 import {CHANGE_HANDBOOK_PAGE} from "../actions/types";
 
 function rootReducer(state = {name: 'Horizons'}, action) {
@@ -13,4 +14,10 @@ function rootReducer(state = {name: 'Horizons'}, action) {
     }
 }
 
-export default rootReducer;
+import {combineReducers} from 'redux';
+import authReducer from './authReducer';
+
+
+export default combineReducers({
+    auth: authReducer,
+})

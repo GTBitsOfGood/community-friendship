@@ -10,11 +10,11 @@ const Register = ({ name }) => {
             <h1>Registration Page</h1>
             <form action="/api/register" method="post">
                 <div>
-                    <label for="username">Username</label>
+                    <label >Username</label>
                     <input type="text" name="username"/>
                 </div>
                 <div>
-                    <label for="password">Password</label>
+                    <label >Password</label>
                     <input type="text" name="password"/>
                 </div>
                 <div>
