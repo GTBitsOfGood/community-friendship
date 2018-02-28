@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import Title from '../components/Title';
-import PDFViewer from '../components/PDFViewer';
+import Title from './Title';
+import PDFViewer from './PDFViewer';
 
 
 const EmployeeHandbook = ({ name }) => {

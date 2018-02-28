@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import Title from '../components/Title';
-import LoginForm from '../components/LoginForm';
+import Title from './Title';
+import LoginForm from './LoginForm';
 
 const Login = ({ name }) => {
     return (
