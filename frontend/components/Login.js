@@ -1,22 +1,67 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import Title from './Title';
-import LoginForm from './LoginForm';
+import {Component} from "react/lib/ReactBaseClasses";
 
-const Login = ({ name }) => {
-    return (
-        <div>
-            <Title name={name} />
-            <h1>Login Page</h1>
-            <LoginForm/>
-        </div>
-    );
-};
+class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: '',
+            password: ''
+        }
 
-Login.propTypes = {
-    name: PropTypes.string,
-};
+    }
+
+    handleUserNameInput(e) {
+        this.setState({userName: e.target.value});
+    }
+
+    handlePasswordInput(e) {
+        this.setState({password: e.target.value});
+    }
+
+    handleSubmit(){
+        this.props.push('/')
+    }
+
+    render() {
+        return (
+            <div>
+                <Title name={name}/>
+                <h1>Login Page</h1>
+                <form>
+                    <div>
+                        <label>Username</label>
+                        <input
+                            type="text"
+                            name="username"
+                            value={this.state.username}
+                            required
+                            onChange={this.handleUserNameInput}
+                        />
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            value={this.state.password}
+                            required
+                            onChange={this.handlePasswordInput}
+                        />
+                    </div>
+                    <div>
+                        <button
+                            type="Submit"
+                            value="Submit">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        );
+    }
+}
 
 const mapStateToProps = (state) => {
     return {
@@ -25,8 +70,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (/* dispatch */) => {
-    return {
-    };
+    return {};
 };
 
 export default connect(
