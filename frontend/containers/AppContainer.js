@@ -6,13 +6,16 @@ import Route from "react-router-dom/es/Route";
 import Switch from "react-router-dom/es/Switch";
 import BrowserRouter from "react-router-dom/es/BrowserRouter";
 import PDFViewer from "../components/PDFViewer";
+import Header from "../components/Header";
+import Home from "../components/Home";
 
 const AppContainer = () => {
     return (
         <BrowserRouter>
             <div>
+                <Header/>
                 <Switch>
-                    <Route exact path="/" component={Login}/>
+                    <Route exact path="/" component={Home}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>
                     <Route path="/employeehandbook" component={PDFViewer}/>

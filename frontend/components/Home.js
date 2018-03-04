@@ -1,13 +1,13 @@
-import {Component} from "react/lib/ReactBaseClasses";
-import {connect} from "react-redux";
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 class Home extends Component {
     render(){
-        return <div></div>;
+        return <div>landing page</div>;
     }
 }
 
-const maoStateToProps = (state) => {
+const mapStateToProps = (state) => {
     return {};
 };
 const mapDispatchToProps = () => {

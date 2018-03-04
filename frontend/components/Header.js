@@ -9,12 +9,12 @@ class Header extends Component {
         this.props.fetchUser();
     }
 
-    renderContent() {
+    authOutput() {
         switch (this.props.authState) {
             case AUTH_STATE.LOGGED_IN:
                 return <a href={'/api/auth/logout'}>log out</a>;
             case AUTH_STATE.NOTHING:
-                return <Link to={'/login'}/>;
+                return <Link to={'/login'}>Log in</Link>;
             default:
                 return '';
         }
@@ -30,7 +30,7 @@ class Header extends Component {
                 </h1>
 
                 <h3>
-                    {this.renderContent()}
+                    {this.authOutput()}
                 </h3>
 
             </nav>
