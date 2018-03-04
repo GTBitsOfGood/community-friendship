@@ -13,10 +13,8 @@ class Header extends Component {
         switch (this.props.authState) {
             case AUTH_STATE.LOGGED_IN:
                 return <a href={'/api/auth/logout'}>log out</a>;
-            case AUTH_STATE.NOTHING:
-                return <Link to={'/login'}>Log in</Link>;
             default:
-                return '';
+                return <Link to={'/login'}>Log in</Link>;
         }
     }
 
