@@ -13,8 +13,6 @@ class Login extends Component {
         this.handleUserNameInput = this.handleUserNameInput.bind(this);
         this.handlePasswordInput = this.handlePasswordInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
-
     }
 
     handleUserNameInput(e) {
@@ -25,8 +23,8 @@ class Login extends Component {
         this.setState({password: e.target.value});
     }
 
-    handleSubmit(){
-        this.props.login(this.state.username,this.state.password);
+    handleSubmit() {
+        this.props.login(this.state.username, this.state.password);
         console.log('i clicked submit!');
     }
 
@@ -34,33 +32,33 @@ class Login extends Component {
         return (
             <div>
                 <h1>Login Page</h1>
-                    <div>
-                        <label>Username</label>
-                        <input
-                            type="text"
-                            name="username"
-                            value={this.state.username}
-                            required
-                            onChange={this.handleUserNameInput}
-                        />
-                    </div>
-                    <div>
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            value={this.state.password}
-                            required
-                            onChange={this.handlePasswordInput}
-                        />
-                    </div>
-                    <div>
-                        <button
-                            type="Submit"
-                            value="Submit"
-                            onClick={this.handleSubmit}>Submit
-                        </button>
-                    </div>
+                <div>
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        name="username"
+                        value={this.state.username}
+                        required
+                        onChange={this.handleUserNameInput}
+                    />
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        value={this.state.password}
+                        required
+                        onChange={this.handlePasswordInput}
+                    />
+                </div>
+                <div>
+                    <button
+                        type="Submit"
+                        value="Submit"
+                        onClick={this.handleSubmit}>Submit
+                    </button>
+                </div>
             </div>
         );
     }
@@ -74,7 +72,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (/* dispatch */) => {
     return {
-        login:login
+        login: login
     };
 };
 
