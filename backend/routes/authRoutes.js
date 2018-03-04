@@ -22,7 +22,10 @@ router.post('/login',  function(req, res, next) {
             res.send(err);
             return;
         }
-        req.logIn(user);
+        req.logIn(user, function(err) {
+            if (err) { return res.send(err); }
+            return res.send(req.user);
+        });
     })(req, res, next);
 });
 

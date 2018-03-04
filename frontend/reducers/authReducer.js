@@ -12,7 +12,7 @@ export default function(state = authInitial, action){
             if(action.payload === 'err')
                 return {...state, authState:AUTH_STATE.FAIL};
             else
-                return {...state, authState:AUTH_STATE.SUCCESS, user:action.payload};
+                return {...state, authState:AUTH_STATE.LOGGED_IN, user:action.payload};
         default:
             return state;
     }

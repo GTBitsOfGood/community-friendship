@@ -9,6 +9,5 @@ export default function pdfReducer(state = null, action) {
             break;
         default:
             return state;
-
     }
 }
