@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const auth = require('./authRoutes')(router);
-const pdf = require('./pdfRoutes')(router);
+const auth = require('./authRoutes');
+const pdf = require('./pdfRoutes');
 
 function checkAuth(req, res, next) {
 

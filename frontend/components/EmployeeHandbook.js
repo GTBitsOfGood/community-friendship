@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import Title from './Title';
 import PDFViewer from './PDFViewer';
 
 
 const EmployeeHandbook = ({ name }) => {
     return (
         <div>
-            <Title name={name} />
             <PDFViewer/>
 
         </div>

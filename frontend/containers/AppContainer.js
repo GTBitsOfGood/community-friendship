@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import EmployeeHandbook from "../components/EmployeeHandbook";
@@ -21,10 +20,6 @@ const AppContainer = ({name}) => {
             </div>
         </BrowserRouter>
     );
-};
-
-AppContainer.propTypes = {
-    name: PropTypes.string,
 };
 
 const mapStateToProps = (state) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Title from './Title';
 import {Component} from "react/lib/ReactBaseClasses";
+import {login} from "../actions";
 
 class Login extends Component {
     constructor(props) {
@@ -9,12 +9,16 @@ class Login extends Component {
         this.state = {
             username: '',
             password: ''
-        }
+        };
+        this.handleUserNameInput = this.handleUserNameInput.bind(this);
+        this.handlePasswordInput = this.handlePasswordInput.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+
 
     }
 
     handleUserNameInput(e) {
-        this.setState({userName: e.target.value});
+        this.setState({username: e.target.value});
     }
 
     handlePasswordInput(e) {
@@ -22,15 +26,14 @@ class Login extends Component {
     }
 
     handleSubmit(){
-        this.props.push('/')
+        this.props.login(this.state.username,this.state.password);
+        console.log('i clicked submit!');
     }
 
     render() {
         return (
             <div>
-                <Title name={name}/>
                 <h1>Login Page</h1>
-                <form>
                     <div>
                         <label>Username</label>
                         <input
@@ -54,10 +57,10 @@ class Login extends Component {
                     <div>
                         <button
                             type="Submit"
-                            value="Submit">
+                            value="Submit"
+                            onClick={this.handleSubmit}>Submit
                         </button>
                     </div>
-                </form>
             </div>
         );
     }
@@ -70,10 +73,12 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (/* dispatch */) => {
-    return {};
+    return {
+        login:login
+    };
 };
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps()
 )(Login);

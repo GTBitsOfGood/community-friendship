@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
-import Title from './Title';
 
 const Register = ({ name }) => {
     return (
         <div>
-            <Title name={name} />
             <h1>Registration Page</h1>
             <form action="/api/register" method="post">
                 <div>

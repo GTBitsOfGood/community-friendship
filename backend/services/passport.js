@@ -30,7 +30,7 @@ passport.use('local-signup', new LocalStrategy(
         const user = await User.findOne({username: username});
 
         if (user) {
-            return cb('user exists', false);
+            return cb('err', false);
         }
 
         const newUser = await new User({username: username, password: User.generateHash(password)}).save();
@@ -45,5 +45,5 @@ passport.use('local-login', new LocalStrategy(
         if (user && await user.checkPassword(password)) {
             return cb(null, user);
         }
-        cb("incorrect pass/ user", false);
+        cb('err', false);
     }));
