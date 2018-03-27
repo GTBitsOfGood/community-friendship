@@ -31,7 +31,6 @@ class PDFViewer extends Component {
                 </object>
             </div>
 
-
     );}
 
 }

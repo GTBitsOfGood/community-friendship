@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import Title from '../components/Title';
+import Navbar from '../components/Navbar.js'
+
 
 const AppContainer = ({ name }) => {
     return (
         <div>
             <Title name={name} />
-            <h1>hi</h1>
         </div>
     );
 };

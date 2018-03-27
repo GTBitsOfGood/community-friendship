@@ -1,0 +1,78 @@
+.body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    height: 100px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    background: #674faf;
+    padding: 0px;
+}
+
+.nav-link {
+    color: white;
+    line-height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.banner {
+    max-height: 100px;
+}
+
+.dropdown-menu {
+    line-height: normal;
+}
+
+.navbar-nav {
+    height: 100%;
+}
+
+.nav-item-right {
+    float: right;
+}
+
+.nav-item {
+    height: 100px;
+}
+
+.image-container {
+    background-color: white;
+    overflow-y: hidden;
+    height: 30em;
+    position: relative;
+}
+
+.carousel-image {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: 'Roboto Slab';
+    font-family: 'Fjalla One';
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Fjalla One'
+}
+
+.footer {
+    background-color: dodgerblue;
+    padding-top: 50px;
+    color: white;
+    font-family: 'Roboto Slab';
+    font-size: 18px;
+    padding-bottom: 50px
+}
+
+.footer-image {
+    width: inherit;
+}

@@ -6,7 +6,7 @@ import DevTools from './DevTools';
 import Login from './Login.js';
 import Register from './Register.js';
 import EmployeeHandbook from './EmployeeHandbook.js';
-
+import Navbar from '../components/Navbar.js'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -15,6 +15,7 @@ export default function Root({ store }) {
     return (
         <Provider store={store}>
             <div>
+                <Navbar/>
                 <Router>
                     <div>
                         <Switch>
@@ -22,7 +23,6 @@ export default function Root({ store }) {
                             <Route path="/login" component={Login}/>
                             <Route path="/register" component={Register}/>
                             <Route path="/employeehandbook" component={EmployeeHandbook}/>
-
                         </Switch>
                     </div>
                 </Router>
