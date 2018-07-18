@@ -2,8 +2,31 @@
 <!-- add on hover effect-->
 
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- My css styles-->
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=BenchNine:700|Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+
+<body style="background-color:">
+    <!--Top header -->
+    <div class="containter-fluid" style="height:100px;">
+        <img class="banner" src="cf-logo.png">
+        <img class="banner" src="growing-logo.png">
+    </div>
+    <!---   
         <style>
 
             .container {
@@ -92,54 +115,113 @@
                     -ms-transform: translate(-50%, -50%);
                     text-align: center;
                 }
-                </style>
-                </head>
-                <body>
-                    <a href="https://dbhdd.georgia.gov/">
-                        <div class="container">
-                            <img src="image1.jpg" alt="img1" style="width:200px;height:200px;">
-                            <div class="overlay1">
-                                <div class="text">GA Department of Behavioral Health and Developmental Disabilities
+                </style> -->
 
-                                </div>
-                            </div>
-                        </a>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg mt-0 p-0 purple" style="height: 100px">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="about-us-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="about-us-tab">
+                        <a class="dropdown-item" href="#">Who We Are</a>
+                        <a class="dropdown-item" href="#">CFI Leadership</a>
+                        <a class="dropdown-item" href="#">Annual Report</a>
+                        <a class="dropdown-item" href="#">Strategic Plan</a>
+                        <a class="dropdown-item" href="#">Succession Plan</a>
+                        <a class="dropdown-item" href="#">Privacy Policy</a>
                     </div>
-                    
-                    
-                    <a href="https://gvs.georgia.gov/">
-                        <div class="container">
-                            <img src="image2.jpg" alt="img2" style="width:250px;height:200px;">
-                            <div class="overlay2">
-                                <div class="text">GA Vocational Rehabilitation Agency
-                                </div>
-                            </div>
-                        </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="what-we-do" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">What We Do
                     </a>
-                    
-                    <a href="http://www.gmhcn.org">
-                        <div class="container">
-                            <img src="image3.jpg" alt="img3" style="width:200px;height:200px;">
-                            <div class="overlay3">
-                                <div class="text">GA Mental Health Consumer Network</div>
-                            </div>
-                        </div>
+                    <div class="dropdown-menu" aria-labelledby="what-we-do">
+                        <a class="dropdown-item" href="#">Services</a>
+                        <a class="dropdown-item" href="#">Eligibility</a>
+                        <a class="dropdown-item" href="#">Success Stories</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" style=>
+                    <a class="nav-link dropdown-toggle" href="#" id="resources-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources
                     </a>
-                    
-                    <a href="https://www.psychrehabassociation.org">
-                        <div class="container">
-                            <img src="image4.jpg" alt="img4" style="width:300px;height:200px;">
-                            <div class="overlay4">
-                                <div class="text">Psychiatric Rehabilitation Association</div>
-                            </div>
-                        </div>
-                    </a>
-                
-                </body>
-                </html>
+                    <div class="dropdown-menu" aria-labelledby="resources-tab">
+                        <a class="dropdown-item" href="#">Additional Links</a>
+                        <a class="dropdown-item" href="#">Newsletter</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" style=>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Get Involved        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Volunteer</a>
+                        <a class="dropdown-item" href="#">Join Our Staff</a>
+                    </div>
+                </li>
+                <li class="nav-item active" style=>
+                    <a class="nav-link" href="#">Donate <span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active nav-item-right">
+                    <a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item nav-item-right">
+                    <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!--Images-->
+    <a href="https://dbhdd.georgia.gov/">
+        <div class="container">
+            <img src="image1.jpg" alt="img1" style="width:200px;height:200px;">
+            <div class="overlay1">
+                <div class="text">GA Department of Behavioral Health and Developmental Disabilities
+
+                </div>
+            </div>
+        </div>
+    </a>
 
 
 
+    <a href="https://gvs.georgia.gov/">
+        <div class="container">
+            <img src="image2.jpg" alt="img2" style="width:250px;height:200px;">
+            <div class="overlay2">
+                <div class="text">GA Vocational Rehabilitation Agency
+                </div>
+            </div>
+        </div>
+    </a>
 
+    <a href="http://www.gmhcn.org">
+        <div class="container">
+            <img src="image3.jpg" alt="img3" style="width:200px;height:200px;">
+            <div class="overlay3">
+                <div class="text">GA Mental Health Consumer Network</div>
+            </div>
+        </div>
+    </a>
 
+    <a href="https://www.psychrehabassociation.org">
+        <div class="container">
+            <img src="image4.jpg" alt="img4" style="width:300px;height:200px;">
+            <div class="overlay4">
+                <div class="text">Psychiatric Rehabilitation Association</div>
+            </div>
+        </div>
+    </a>
 
+</body>
+
+</html>

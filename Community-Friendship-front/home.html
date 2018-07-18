@@ -19,12 +19,14 @@
 
 <body>
     <!--Top header -->
-    <img class="banner" src="cf-logo.png">
-    <img class="banner" src="growing-logo.png">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg purple" style="height:100px">
-        <a class="navbar-brand" href="#">
+    <div class="containter-fluid" style="height:100px;">
+        <a href="home.html">
+            <img class="banner" src="cf-logo.png" href="home.html">
         </a>
+        <img class="banner" src="growing-logo.png">
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg mt-0 p-0 purple" style="height: 100px">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,28 +36,27 @@
                     <a class="nav-link dropdown-toggle" href="#" id="about-us-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About us
                     </a>
                     <div class="dropdown-menu" aria-labelledby="about-us-tab">
-                        <a class="dropdown-item" href="#">Who We Are</a>
-                        <a class="dropdown-item" href="#">CFI Leadership</a>
-                        <a class="dropdown-item" href="#">Annual Report</a>
-                        <a class="dropdown-item" href="#">Strategic Plan</a>
-                        <a class="dropdown-item" href="#">Succession Plan</a>
-                        <a class="dropdown-item" href="#">Privacy Policy</a>
+                        <a class="dropdown-item" href="who-we-are.html">Who We Are</a>
+                        <a class="dropdown-item" href="leadership-team.html">CFI Leadership</a>
+                        <a class="dropdown-item" href="logos.html">CFI Partners</a>
+                        <a class="dropdown-item" href="annual-report.html">Annual Report</a>
+                        <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="what-we-do" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">What We Do
                     </a>
                     <div class="dropdown-menu" aria-labelledby="what-we-do">
-                        <a class="dropdown-item" href="#">Services</a>
-                        <a class="dropdown-item" href="#">Eligibility</a>
-                        <a class="dropdown-item" href="#">Success Stories</a>
+                        <a class="dropdown-item" href="services.html">Services</a>
+                        <a class="dropdown-item" href="eligibility.html">Eligibility</a>
+                        <a class="dropdown-item" href="success-stories.html">Success Stories</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown" style=>
                     <a class="nav-link dropdown-toggle" href="#" id="resources-tab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources
                     </a>
                     <div class="dropdown-menu" aria-labelledby="resources-tab">
-                        <a class="dropdown-item" href="#">Additional Links</a>
+                        <a class="dropdown-item" href="additional-links.html">Additional Links</a>
                         <a class="dropdown-item" href="#">Newsletter</a>
                     </div>
                 </li>
@@ -63,23 +64,27 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 Get Involved        </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Volunteer</a>
-                        <a class="dropdown-item" href="#">Join Our Staff</a>
+                        <a class="dropdown-item" href="volunteer.html">Volunteer</a>
+                        <a class="dropdown-item" href="https://www.workforgood.org/">Join Our Staff</a>
                     </div>
                 </li>
-                <li class="nav-item active" style=>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Donate <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active nav-item-right">
+
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item nav-item-right">
                     <a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item nav-item-right">
+                    <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
-    <!-- Navbar -->
-
     <!-- Carousel Container -->
-    <div class="carousel-container">
+    <div class="carousel-container " style="background: transparent url('tree-banner.jpeg')">
         <!-- Carousel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -90,12 +95,12 @@ Get Involved        </a>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="image-container">
-                        <img class="carousel-image" src="tree-banner.jpeg" alt="First slide">
+                        <img class="carousel-image" src="images/IMG_9634.JPG" alt="First slide">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="image-container">
-                        <img class="carousel-image" src="image3.jpeg" alt="First slide">
+                        <img class="carousel-image" src="images/IMG_9558.jpg" alt="First slide">
                     </div>
                 </div>
             </div>
@@ -112,15 +117,14 @@ Get Involved        </a>
     </div>
     <!-- Carousel Container -->
     <!-- What makes us different -->
-
     <div class="jumbotron" style="margin-bottom:0px; background-color: white;">
         <div class="container">
             <div class="mb-5">
-                <h1 class="display-5 purple-text" style="text-align: center; text-transform: uppercase">What Makes Us Different</h1>
+                <h1 class="display-5 purple-text" style="text-align: center; text-transform: uppercase">A Different Approach to Mental Health Services</h1>
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="spotlight-donor.jpeg" style="width:100%">
+                    <img class="rounded" src="images/IMG_9527.JPG" style="width:100%">
                 </div>
                 <div class="col-6">
                     <h2 class="purple-text"> The Recovery Model</h2>
@@ -143,55 +147,6 @@ Get Involved        </a>
         </div>
     </div>
     <!-- What We Do -->
-
-    <!-- Spotlight Donors -->
-    <div>
-        <div class="container">
-            <div class="text-center mt-5 mb-5">
-                <h1 class="text-center orange-text">Spotlight Donors and Organizations</h1>
-            </div>
-            <div class="row mt-5 mb-5">
-                <div class="col">
-                    <div class="card">
-                        <img class="card-img-top" src="spotlight-donor.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img class="card-img-top" src="spotlight-donor.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="media">
-                    <img class="mr-3 mb-3" src="spotlight-donor.jpeg" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0">Spotlight Donor 1</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="media">
-                    <img class="mr-3 mb-3" src="spotlight-donor.jpeg" alt="Generic placeholder image">
-                    <div class="media-body">
-                        <h5 class="mt-0">Spotlight Donor 1</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Spotlight Donors -->
     <!-- Four Circles-->
     <div class="container mt-5">
         <div class="text-center mt-5 mb-5 green-text">
@@ -201,7 +156,7 @@ Get Involved        </a>
             <div class="col-sm-3 text-center">
                 <img class="mx-auto" style="width: 100px;" src=home-icon.png>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Psychosocial Rehabilitation Services</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
@@ -209,7 +164,7 @@ Get Involved        </a>
             <div class="col-sm-3 text-center">
                 <img class="mx-auto" style="width: 100px;" src=home-icon.png>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Housing Services</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
@@ -218,7 +173,7 @@ Get Involved        </a>
 
                 <img class="mx-auto" style="width: 100px;" src=home-icon.png>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Employment Services</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
@@ -226,7 +181,7 @@ Get Involved        </a>
             <div class="col-sm-3 text-center">
                 <img class="mx-auto" style="width: 100px;" src=home-icon.png>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
+                    <h5 class="card-title">Peer Support Services</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
@@ -234,8 +189,38 @@ Get Involved        </a>
         </div>
     </div>
     <!-- Four Circles-->
+
+    <!-- Spotlight Donors -->
+    <div>
+        <div class="container">
+            <div class="text-center mt-5 mb-5">
+                <h1 class="text-center orange-text">Community Spotlight</h1>
+            </div>
+
+            <div class="row">
+                <div class="media">
+                    <img class="mr-3 mb-3 rounded" src="spotlight-donor.jpeg" alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0">Spotlight Donor 1</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="media">
+                    <img class="mr-3 mb-3 rounded" src="spotlight-donor.jpeg" alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0">Spotlight Donor 1</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spotlight Donors -->
+
     <!-- Footer -->
-    <div class="container-fluid footer purple" style="width:100%;">
+    <div class="container-fluid footer purple mt-5" style="width:100%;">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -273,7 +258,4 @@ Get Involved        </a>
         </div>
     </div>
     <!-- Footer -->
-
-
-    <img class="footer-image" src="footer.png">
 </body>
